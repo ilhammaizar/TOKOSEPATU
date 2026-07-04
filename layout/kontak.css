@@ -1,0 +1,122 @@
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    height: 100px;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.a-navbar{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.a-navbar:hover{
+    color: teal;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.kontak-div {
+    text-align: center;
+}
+
+.p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.ul-navbar {
+    list-style: none;
+    padding: 10px 10px;
+    display: flexbox;
+}
+
+.ul-navbar li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ul-navbar li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.a-ig{
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+}
+.a-ig:hover{
+    color: rgb(100, 231, 94);
+}
+.a-wa{
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+}
+.a-wa:hover{
+    color: rgb(21, 165, 96);
+}
+.a-email{
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+}
+.a-email:hover{
+    color: rgb(103, 103, 222);
+}
+.a-alamat{
+    color: rgb(5, 0, 0);
+    text-decoration: none;
+}
+.a-alamat:hover{
+    color: rgb(198, 178, 22);
+}
+/* Footer styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
