@@ -1,59 +1,107 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontak</title>
+    <meta name="description" content="Hubungi StoreSter untuk informasi produk dan pemesanan." />
+    <title>Kontak — StoreSter</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="kontak.css" />
   </head>
   <body>
-    <header>
-      <h1>Casual Shoes</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="a-navbar">Beranda</a></li>
-          <li><a href="index.html" class="a-navbar">Produk</a></li>
-          <li><a href="kontak.html" class="a-navbar">Kontak</a></li>
-          <li><a href="keranjang.html" class="a-navbar">Keranjang</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="kontak">
-      <div class="kontak-div">
-        <h2>Hubungi Kami</h2>
-        <p class="p">
-          Jika Anda memiliki pertanyaan atau ingin memesan, hubungi kami
-          melalui:
-        </p>
-        <ul class="ul-navbar">
-          <li class="ig">
-            <img src="instagram.jpg" alt="instagram" /><a
-              href="https://www.instagram.com/ilhmauliamzr/"
-              class="a-ig"
-              >ilhmauliamzr</a
-            >
-          </li>
-          <li class="wa">
-            <img src="whatsapp.jpg" alt="whatsapp" /><a
-              href="https://wa.me/+6281218126903"
-              class="a-wa"
-              >+62-812-1812-6903</a
-            >
-          </li>
-          <li class="email">
-            <img src="email.jpg" alt="email" /><a
-              href="mailto:ilham.maizar2506@gmail.com"
-              class="a-email"
-              >ilham.maizar2506@gmail.com</a
-            >
-          </li>
-          <li class="lokasi">
-            <img src="lokasi.jpg" alt="lokasi" /><a href="" class="a-alamat"
-              >Jl. Kemanggisan Pulo No.-, Kota Jakarta Barat, Kecamatan
-              Palmerah</a
-            >
-          </li>
-        </ul>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.php" aria-label="StoreSter, kembali ke beranda">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>storester<span class="brand-period">.</span></span>
+        </a>
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="../index.php#home">Beranda</a></li>
+            <li><a class="nav-link" href="../index.php#produk">Koleksi</a></li>
+            <li><a class="nav-link is-current" href="kontak.html" aria-current="page">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="header-login" href="../login.php">Masuk</a>
+          <a class="header-register" href="../registrasi.php">Daftar</a>
+          <a class="cart-link" href="keranjang.php">
+            <span class="cart-icon" aria-hidden="true">+</span>
+            Keranjang
+          </a>
+        </div>
       </div>
-    </section>
+    </header>
+
+    <main class="page-main">
+      <section class="page-shell contact-page" aria-labelledby="contact-title">
+        <div class="page-intro">
+          <p class="eyebrow"><span></span> Kami siap membantu</p>
+          <h1 id="contact-title">Mari <em>ngobrol.</em></h1>
+          <p>
+            Ada pertanyaan tentang produk atau pemesanan? Pilih cara yang paling
+            nyaman untuk menghubungi kami.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://www.instagram.com/ilhmauliamzr/">
+            <span class="contact-icon">
+              <img src="instagram.jpg" alt="" />
+            </span>
+            <span class="contact-card-copy">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">ilhmauliamzr</span>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-card" href="https://wa.me/6281218126903">
+            <span class="contact-icon">
+              <img src="whatsapp.jpg" alt="" />
+            </span>
+            <span class="contact-card-copy">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">+62 812-1812-6903</span>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="contact-card" href="mailto:ilham.maizar2506@gmail.com">
+            <span class="contact-icon">
+              <img src="email.jpg" alt="" />
+            </span>
+            <span class="contact-card-copy">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">ilham.maizar2506@gmail.com</span>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <div class="contact-card contact-address">
+            <span class="contact-icon">
+              <img src="lokasi.jpg" alt="" />
+            </span>
+            <span class="contact-card-copy">
+              <span class="contact-label">Lokasi</span>
+              <span class="contact-value">
+                Jl. Kemanggisan Pulo No.-, Palmerah, Jakarta Barat
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <a class="back-link" href="../index.php">← Kembali ke beranda</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.php">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>storester<span class="brand-period">.</span></span>
+      </a>
+      <p>Temukan langkah terbaikmu.</p>
+      <span>© 2026 StoreSter</span>
+    </footer>
   </body>
 </html>

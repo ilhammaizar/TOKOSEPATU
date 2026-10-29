@@ -1,13 +1,11 @@
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$database_name = "db_koneksi";
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-$db = mysqli_connect($hostname,$username,$password,$database_name);
+$dbHost = 'localhost';
+$dbUser = 'root';
+$dbPassword = '';
+$databaseName = 'db_koneksi';
 
-if ($db->connect_error) {
-    echo "koneksi database rusak";
-    die("error!");
-}
+$db = new mysqli($dbHost, $dbUser, $dbPassword, $databaseName);
+$db->set_charset('utf8mb4');
 ?>

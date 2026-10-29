@@ -1,142 +1,170 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.cart-page {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
-/* Body styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+.cart-layout {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  align-items: start;
+  gap: 1.5rem;
 }
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.cart-panel,
+.order-summary {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+.panel-kicker {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-/* Main styles */
-main {
-    padding: 2rem 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.cart-items {
-    margin-bottom: 1.5rem;
+.panel-kicker span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .cart-item {
-    display: flex;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.cart-item img {
-    width: 100px;
-    height: auto;
-    margin-right: 1rem;
-    border-radius: 5px;
+.cart-product-image {
+  width: 160px;
+  flex-shrink: 0;
+  background: #f0f1ec;
 }
 
-.item-details {
-    flex-grow: 1;
+.cart-product-image img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
 }
 
-.item-details h3 {
-    margin-bottom: 0.5rem;
+.cart-item-details h2 {
+  margin-top: 0.2rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
 }
 
-.item-details p {
-    font-weight: bold;
+.cart-item-note {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.78rem;
 }
 
-.remove-item {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #999;
+.cart-item-price {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
-.remove-item:hover {
-    color: #f00;
+.cart-panel .back-link {
+  margin-top: 0;
 }
 
-.total {
-    text-align: right;
-    margin-bottom: 1.5rem;
+.order-summary h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
 }
 
-.total h3 {
-    margin-bottom: 0.5rem;
+.summary-row,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.82rem;
 }
 
-.total p {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #333;
+.summary-row {
+  margin-top: 0.9rem;
 }
 
-/* Button styles */
-.payment-button {
-    display: block;
-    width: 100%;
+.summary-muted {
+  align-items: start;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.summary-muted span:last-child {
+  max-width: 145px;
+  text-align: right;
+}
+
+.summary-total {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  font-weight: 650;
+}
+
+.summary-total strong {
+  white-space: nowrap;
+}
+
+.checkout-button {
+  width: 100%;
+  margin-top: 1.35rem;
+}
+
+.summary-note {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .cart-page {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .cart-layout {
+    margin-top: 1.75rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .cart-panel,
+  .order-summary,
+  .cart-item-details {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .cart-panel,
+  .order-summary {
     padding: 1rem;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+  }
+
+  .cart-item {
+    align-items: start;
+    gap: 0.85rem;
+  }
+
+  .cart-product-image {
+    width: 112px;
+  }
+
+  .cart-item-details h2 {
     font-size: 1rem;
-    margin-bottom: 1rem;
-    text-decoration: none; /* Remove underline for links */
-}
-
-.payment-button:hover {
-    background-color: #45a049;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  }
 }

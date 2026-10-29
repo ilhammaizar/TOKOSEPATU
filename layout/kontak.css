@@ -1,122 +1,129 @@
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
+.contact-page {
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    height: 100px;
-    color: #333;
+.page-intro {
+  max-width: 620px;
 }
 
-/* Header styles */
-header {
-    background-color: #222;
-    color: #fff;
+.page-intro h1 {
+  margin-top: 0.75rem;
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+  font-weight: 650;
+  letter-spacing: -0.075em;
+  line-height: 1.05;
+}
+
+.page-intro h1 em {
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.page-intro > p:last-child {
+  max-width: 500px;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.contact-grid {
+  max-width: 940px;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  min-height: 112px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+a.contact-card:hover {
+  border-color: #bac7b2;
+  transform: translateY(-2px);
+}
+
+a.contact-card:focus-visible {
+  border-color: var(--accent);
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--sage);
+}
+
+.contact-icon img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.contact-card-copy {
+  min-width: 0;
+  display: grid;
+  gap: 0.18rem;
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  overflow-wrap: anywhere;
+  font-size: 0.94rem;
+  font-weight: 620;
+}
+
+.contact-arrow {
+  margin-left: auto;
+  align-self: start;
+  color: var(--accent);
+}
+
+.back-link {
+  margin-top: 2rem;
+  display: inline-flex;
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.back-link:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .contact-page {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .contact-grid {
+    margin-top: 1.8rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .contact-card {
+    min-height: 90px;
     padding: 1rem;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-.a-navbar{
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-.a-navbar:hover{
-    color: teal;
-}
-
-/* Main content styles */
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.kontak-div {
-    text-align: center;
-}
-
-.p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.ul-navbar {
-    list-style: none;
-    padding: 10px 10px;
-    display: flexbox;
-}
-
-.ul-navbar li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.ul-navbar li img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-}
-.a-ig{
-    color: rgb(5, 0, 0);
-    text-decoration: none;
-}
-.a-ig:hover{
-    color: rgb(100, 231, 94);
-}
-.a-wa{
-    color: rgb(5, 0, 0);
-    text-decoration: none;
-}
-.a-wa:hover{
-    color: rgb(21, 165, 96);
-}
-.a-email{
-    color: rgb(5, 0, 0);
-    text-decoration: none;
-}
-.a-email:hover{
-    color: rgb(103, 103, 222);
-}
-.a-alamat{
-    color: rgb(5, 0, 0);
-    text-decoration: none;
-}
-.a-alamat:hover{
-    color: rgb(198, 178, 22);
-}
-/* Footer styles */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
+  }
 }
